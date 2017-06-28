@@ -58,16 +58,7 @@ jQuery.noConflict();
 				}
 			});
 		
-	$('.form_date').datetimepicker({
-        language:  'fr',
-        weekStart: 1,
-        todayBtn:  1,
-		autoclose: 1,
-		todayHighlight: 1,
-		startView: 2,
-		minView: 2,
-		forceParse: 0
-    });
+
 
 
 			$('#lin1').click(function(){
@@ -195,6 +186,32 @@ jQuery.noConflict();
 				
 			});
 			
+            $("#location").click(function(){
+               $("#Locaop").show();
+			    $("#showstar").hide();	
+			   $("#showcut").hide();
+			   $("#showeco").hide();
+			});
+			$("#star").click(function(){
+               $("#Locaop").hide();
+			   $("#showstar").show();				   	
+			   $("#showcut").hide();
+			   $("#showeco").hide();		  
+			});
+
+			$("#customer").click(function(){
+               $("#Locaop").hide();
+			   $("#showstar").hide();	
+			   $("#showcut").show();
+			    $("#showeco").hide();		  
+			});
+			$("#economy").click(function(){
+               $("#Locaop").hide();
+			   $("#showstar").hide();	
+			   $("#showcut").hide();
+			   $("#showeco").show();	
+
+			});
 
 			$('#hideTR').click(function(){
 				$('#showTR').show();
@@ -205,14 +222,37 @@ jQuery.noConflict();
 				$('#hideTR').show();
 			});    
 
-			$('.addroom1').click(function(){
-                 $('#addnewroom').show('slow');
-				 $('#roommain').hide('slow');
+			$('.addroom2').click(function(){
+                 $('#addnewroom').show('');
+				 $('#roommain').hide('');
 			}); 
 			$('#editroom').click(function(){
-                 $('#roomeditde').show('slow');
-				 $('#roommain').hide('slow');
-			});           
+                 $('#hoteleditde').show('');
+				 $('#hotelmain').hide('');
+			});
+
+			$('.addhotel2').click(function(){
+                 $('#addnewhotel').show('');
+				 $('#hotelmain').hide('');
+			});       
+
+
+
+			    //+++++++
+			$("#langu").change(function(){
+				
+				var val1 = $("#langu").val();
+				var wrapper = $('.Spoken'); 
+				var fieldHTML = '<p><input type="text" name='+ val1 +' value='+ val1 +' readonly="readonly" id="" class="form-control"/> </p>';
+                  
+			    $(wrapper).append(fieldHTML); 
+				$("#lan").show();
+
+      
+			})
+     
+
+				// +++++ 
 
 		
 			$('.rating-lg').each(function(){
