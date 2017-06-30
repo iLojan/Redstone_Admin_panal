@@ -57,8 +57,21 @@ jQuery.noConflict();
 					});
 				}
 			});
+            
 		
+			// $('#slick2').slick({
+			// //   infinite: false,
+			// slidesToShow: 4,
+			// slidesToScroll: 1,
+			// autoplay: true,
+			// autoplaySpeed: 2000
+			// });
 
+			
+		
+                                //   $('#menu').slicknav({
+								// 		prependTo:'#demo1'
+					      		// 	});
 
 
 			$('#lin1').click(function(){
@@ -147,54 +160,51 @@ jQuery.noConflict();
 				$('#per').hide("slow");
 			});
 
+               
 
+
+			   $(".Tennis").click(function(){
+				  
+                 $("#TennisEquipment").toggle();
+				 
+			   });
+			    $('#Tennis').click(function() {
+					if ($(this).is(':checked')) {
+						 $("#TennisEquipment").toggle();
+					}
+				});
 		
 
-		// 	$("#Tennis1").click(function () {
-        //     if ($('#Tennis').is(":checked")) {
-        //         $("#TennisEquipment").show();
-        //     } else {
-        //         $("#TennisEquipment").hide();
-        //     }
-        // });
+					$('#american').click(function(){
+							$('#americancheck1').addClass("glyphicon glyphicon-ok");
+							$("#americanhide").css({   ' border':' 1px solid #279257','background' : '#b5ea96','color':'black'});
+							$("#americanhide").show();
+							$('#american').hide();
+					});
+					$('#americanhide').click(function(){
+								$('#americancheck1').removeClass("glyphicon glyphicon-ok");
+								$("#americanhide").hide();
+								$('#american').show();
+					});
+					$('#asia').click(function(){
+						$('#asiacheck1').addClass("glyphicon glyphicon-ok");
+					});
 
-			$('input[type=checkbox]').click(function(){
-				alert('test');
-				$('#TennisEquipment').show("slow");
-			});
-		$('#american').click(function(){
-                $('#americancheck1').addClass("glyphicon glyphicon-ok");
-				 $("#americanhide").css({   ' border':' 1px solid #279257','background' : '#b5ea96','color':'black'});
-				$("#americanhide").show();
-				$('#american').hide();
-
-
-		});
-		$('#americanhide').click(function(){
-                      $('#americancheck1').removeClass("glyphicon glyphicon-ok");
-					  $("#americanhide").hide();
-				      $('#american').show();
-					 
-		});
-			$('#asia').click(function(){
-                $('#asiacheck1').addClass("glyphicon glyphicon-ok");
-		});
-
-                $("#transport").change(function(){
-					var seats = $("#transport").val();
-                  transport(seats);
+					$("#transport").change(function(){
+						var seats = $("#transport").val();
+					transport(seats);
 				
-			});
+		         	});
 			
             $("#location").click(function(){
-               $("#Locaop").show();
+               $("#Locaop").slideToggle("slow");
 			    $("#showstar").hide();	
 			   $("#showcut").hide();
 			   $("#showeco").hide();
 			});
 			$("#star").click(function(){
                $("#Locaop").hide();
-			   $("#showstar").show();				   	
+			   $("#showstar").slideToggle("slow");				   	
 			   $("#showcut").hide();
 			   $("#showeco").hide();		  
 			});
@@ -202,14 +212,14 @@ jQuery.noConflict();
 			$("#customer").click(function(){
                $("#Locaop").hide();
 			   $("#showstar").hide();	
-			   $("#showcut").show();
+			   $("#showcut").slideToggle("slow");	
 			    $("#showeco").hide();		  
 			});
 			$("#economy").click(function(){
                $("#Locaop").hide();
 			   $("#showstar").hide();	
 			   $("#showcut").hide();
-			   $("#showeco").show();	
+			   $("#showeco").slideToggle("slow");	
 
 			});
 
@@ -227,8 +237,8 @@ jQuery.noConflict();
 				 $('#roommain').hide('');
 			}); 
 			$('#editroom').click(function(){
-                 $('#hoteleditde').show('');
-				 $('#hotelmain').hide('');
+                 $('#roomeditde').show('');
+				 $('#roommain').hide('');
 			});
 
 			$('.addhotel2').click(function(){
