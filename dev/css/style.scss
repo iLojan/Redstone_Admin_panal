@@ -22,11 +22,78 @@ h1, h2, h3, h4, h5, h6{
 .amanit-room{
 	border-left:solid #ccc 4px; 
 }
+#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+.submenu{
+	column-count: 3;
+    column-rule: 1px solid #279257;
+    column-gap: 0;
+    width: 838px;
+	border: none;
+	li:hover{
+		color:#279257;
+		background-color:#fff;
+	}
+	li:focus{
+		color:#279257;
+		background-color:#fff;
+	}
+}
+.submenu1{
+	
+    width: auto;
+	border: none;
+	li:hover{
+		color:#279257;
+		background-color:#fff;
+	}
+	li:focus{
+		color:#279257;
+		background-color:#fff;
+	}
+}
+.rate-sub{
+	margin-left: 13%;
+}
+.gues{
+	left: 56%;
+}
+.submenubox{
+	position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    min-width: 160px;
+    padding: 1%;
+    list-style: none;
+	line-height: 28px;
+    font-size: 17px;
+    text-align: left;
+    background-color: #fff;
+     border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    background-clip: padding-box;
+	li{
+		    padding-left: 12px;
+			padding-bottom: 2%;
+			padding-top: 2%;
+	}
+	a{
+		color:#279257;
+	}
+
+}
 input{
 border-radius:1px solid #A4B1C1;
 }
 .imglogo{
 	height: 55px;
+}
+.hotimg{
+	height: 138px
 }
 .userimg{
 	width: 254px;
@@ -120,6 +187,7 @@ border-radius:1px solid #A4B1C1;
 	font-weight: bold;
 	
 }
+	
 .nve1{
 	
 	text-align: center;
@@ -152,17 +220,11 @@ border-radius:1px solid #A4B1C1;
 	}
 	
 
-	.with-columns{
-	column-count: 3;
-    column-rule: 1px solid #279257;
-    column-gap: 0;
-    width: 838px;
-	border: none;
 	li:hover{
 		color:#279257;
 		background-color:#fff;
 	}
-	li:focus{
+	li:visited{
 		color:#279257;
 		background-color:#fff;
 	}
@@ -175,12 +237,12 @@ border-radius:1px solid #A4B1C1;
 		border-radius:5px;
 		color:#0f6636;
 	}
-		a:focus{
+		a:visited{
 		background:#b3f9d3;
 		border-radius:5px;
 		color:#0f6636;
 	}
-	}
+	
 	.without-columns {
 		column-rule: 1px solid #279257;
 		border: none;
@@ -413,6 +475,19 @@ a:focus{
 .nomarH{
 	margin: 1px;
 }
+.nar0{
+	margin-bottom: 0px;
+}
+.week1{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.weeklan{
+	margin-bottom: 5px;
+}
+.mat{
+ margin-top: 50px;
+}
 .nopadi{
 	padding: 1px;
 }
@@ -442,7 +517,7 @@ a:focus{
  
 	}
 	.checkin{
-		    background: #F5F5F5;
+		    background: #FcFcFc;
 		    margin-right: 2%;
 			padding: 2%;
 			border-radius: 7px;

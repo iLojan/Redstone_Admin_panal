@@ -17,7 +17,7 @@ jQuery.noConflict();
 			  dots: false,
 			  infinite: false,
 			  speed: 300,
-			  slidesToShow:6,
+			   slidesToShow:5,
 			  slidesToScroll: 1,
 			  responsive: [
 			    {
@@ -59,13 +59,13 @@ jQuery.noConflict();
 			});
             
 		
-			// $('#slick2').slick({
-			// //   infinite: false,
-			// slidesToShow: 4,
-			// slidesToScroll: 1,
-			// autoplay: true,
-			// autoplaySpeed: 2000
-			// });
+			$('#slick2').slick({
+			//   infinite: false,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 2000
+			});
 
 			
 		
@@ -159,8 +159,64 @@ jQuery.noConflict();
 			$('#includ').click(function(){
 				$('#per').hide("slow");
 			});
+			// calenter
+			$('.date').datepicker();
+			
 
-               
+			
+			// end
+
+					$("#analytics").click(function(){
+						$("#anal-sun").toggle();
+						$("#finance-sub").hide();
+						$("#rate-sub").hide();
+						$("#property-sub").hide();
+						$("#opportunities-sub").hide();
+						$("#guest-sub").hide();
+
+					});
+			   
+			     $("#finance").click(function(){
+                        $("#finance-sub").toggle();
+						$("#anal-sun").hide();
+						$("#rate-sub").hide();
+						$("#property-sub").hide();
+						$("#opportunities-sub").hide();
+						$("#guest-sub").hide();							 
+						 
+			   });
+			     $("#rate").click(function(){
+                        $("#finance-sub").hide();
+						$("#anal-sun").hide();
+						$("#rate-sub").toggle();
+						$("#property-sub").hide();
+						$("#opportunities-sub").hide();
+						$("#guest-sub").hide();						 
+			   });
+			      $("#property").click(function(){
+                        $("#finance-sub").hide();
+						$("#anal-sun").hide();
+						$("#rate-sub").hide();
+						$("#property-sub").toggle();
+						$("#opportunities-sub").hide();
+						$("#guest-sub").hide();						 
+			   });
+			      $("#opportunities").click(function(){
+                        $("#finance-sub").hide();
+						$("#anal-sun").hide();
+						$("#rate-sub").hide();
+						$("#property-sub").hide();
+						$("#opportunities-sub").toggle()
+						$("#guest-sub").hide();						 
+			   });
+			      $("#guest").click(function(){
+                        $("#finance-sub").hide();
+						$("#anal-sun").hide();
+						$("#rate-sub").hide();
+						$("#property-sub").hide();
+						$("#opportunities-sub").hide()
+					    $("#guest-sub").toggle();						 
+			   });
 
 
 			   $(".Tennis").click(function(){
@@ -173,7 +229,34 @@ jQuery.noConflict();
 						 $("#TennisEquipment").toggle();
 					}
 				});
-		
+
+				
+					
+					$("#userimg1").change(function(){
+						userimg(this);
+						
+					});
+				// 		$("#hotelimg").change(function(){
+
+				// 			var wrapper = $('.hoimgad'); 
+				//             var fieldHTML = '<div class="col-sm-6 col-md-4"><div class="thumbnail"><img src="images/hotels/hotel-2.jpg" alt="hotel">'+
+				// 			+'<div class="caption text-muted-ali"><a href=""> Edit<i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></div></div></div> ';
+			    // $(wrapper).append(fieldHTML); 
+						
+						
+				// 	});
+					$("#hotelimg").change(function(){						
+						hotelimg(this);						
+					});
+					$("#hotelhome").change(function(){
+                         hotelhome(this);
+			         });
+					 $("#roomhome").change(function(){
+                         roomhome(this);
+			         });
+
+				
+						
 
 					$('#american').click(function(){
 							$('#americancheck1').addClass("glyphicon glyphicon-ok");
@@ -233,18 +316,22 @@ jQuery.noConflict();
 			});    
 
 			$('.addroom2').click(function(){
-                 $('#addnewroom').show('');
-				 $('#roommain').hide('');
+                 $('#addnewroom').show();
+				 $('#roommain').hide();
 			}); 
 			$('#editroom').click(function(){
-                 $('#roomeditde').show('');
-				 $('#roommain').hide('');
+                 $('#roomeditde').show();
+				 $('#roommain').hide();
 			});
 
 			$('.addhotel2').click(function(){
-                 $('#addnewhotel').show('');
-				 $('#hotelmain').hide('');
-			});       
+                 $('#addnewhotel').show();
+				 $('#hotelmain').hide();
+			});   
+			$("#edithotel").click(function(){
+                $("#edithotelshow").show();
+				$('#hotelmain').hide();
+			});    
 
 
 
@@ -253,13 +340,15 @@ jQuery.noConflict();
 				
 				var val1 = $("#langu").val();
 				var wrapper = $('.Spoken'); 
-				var fieldHTML = '<p><input type="text" name='+ val1 +' value='+ val1 +' readonly="readonly" id="" class="form-control"/> </p>';
+				var fieldHTML = '<input type="text" name='+ val1 +' value='+ val1 +' id="" class="form-control"/> ';
                   
 			    $(wrapper).append(fieldHTML); 
 				$("#lan").show();
 
       
-			})
+			});
+			
+
      
 
 				// +++++ 
@@ -323,7 +412,56 @@ jQuery.noConflict();
 		});		
 
 
+ function hotelimg(input) {
+						if (input.files && input.files[0]) {
+							var reader = new FileReader();
+							
+							reader.onload = function (e) {
 
+									var wrapper = $('.hoimgad'); 
+				            var fieldHTML = ' <div class="col-sm-6 col-md-4"><div class=""><img src="'+ e.target.result +'"  id="hotel" alt="hotel" class="hotimg"><div class="caption "><a href=""> Deletet<i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></div><div></div> ';
+			                 $(wrapper).append(fieldHTML); 
+								// $('#hotel').attr('src', e.target.result);
+							
+							}
+							
+							reader.readAsDataURL(input.files[0]);
+						}
+					}
+					// Hotel thum Photo
+					function hotelhome(input){
+						if(input.files && input.files[0]){
+							var reader = new FileReader();
+							reader.onload = function(e){
+								$("#hotelhomeimg").attr('src',e.target.result)
+							}
+							reader.readAsDataURL(input.files[0]);
+						}
+					} 
+					// END
+					// Room thum Photo
+					function roomhome(input){
+						if(input.files && input.files[0]){
+							var reader = new FileReader();
+							reader.onload = function(e){
+								$("#roomhomeimg").attr('src',e.target.result)
+							}
+							reader.readAsDataURL(input.files[0]);
+						}
+					} 
+					// END
+					 function userimg(input) {
+						if (input.files && input.files[0]) {
+							var reader = new FileReader();
+							
+							reader.onload = function (e) {
+								$('#user').attr('src', e.target.result);
+							
+							}
+							
+							reader.readAsDataURL(input.files[0]);
+						}
+					}
 function transport(seats){
 switch (seats) {
     case 'Airport shuttle (arranged by property)':
