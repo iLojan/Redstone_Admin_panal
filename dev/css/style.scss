@@ -189,7 +189,9 @@ border-radius:1px solid #A4B1C1;
 }
 	
 .nve1{
-	
+	    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
 	text-align: center;
 	i{
 		    position: relative;
@@ -199,6 +201,7 @@ border-radius:1px solid #A4B1C1;
 	}
 	a{
            color: white;
+		   
 	}
 	.divlink{
 		    padding-top: 25px;
@@ -206,6 +209,10 @@ border-radius:1px solid #A4B1C1;
 			   color: white;
 			   padding-left: 15px;
 			   padding-right: 15px;
+			   line-height: 20px;
+			       display: block;
+                position: relative;
+				    text-decoration: none;
 	}
 	li{
 		padding-left:1%;
@@ -229,19 +236,13 @@ border-radius:1px solid #A4B1C1;
 		background-color:#fff;
 	}
 
-	a{
-		color: #279257;
-	}
 	a:hover{
-		background:#b3f9d3;
+	
 		border-radius:5px;
 		color:#0f6636;
+		background: #fff;
 	}
-		a:visited{
-		background:#b3f9d3;
-		border-radius:5px;
-		color:#0f6636;
-	}
+	
 	
 	.without-columns {
 		column-rule: 1px solid #279257;

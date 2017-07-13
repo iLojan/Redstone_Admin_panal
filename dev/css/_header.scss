@@ -1,6 +1,6 @@
 
 .header{
-	background-color: $menu-bg-color;
+	background-color: #fff;
 
 	.navbar-default .navbar-nav>li>a{
 		color: $menu-font-color;
@@ -32,7 +32,7 @@
 
 	.dropdown-menu>li>a:focus, 
 	.dropdown-menu>li>a:hover{
-		background-color: $primary-bg-color;
+		background-color: #fff;
 	    color: $primary-font-color;
 	}
 
